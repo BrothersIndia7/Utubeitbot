@@ -43,13 +43,13 @@ async def _start(c: UtubeBot, m: Message):
     while (time.time() - start_time) < time_limit:
 
     # Calculate the time remaining
-    time_remaining = time_limit - (time.time() - start_time)
+    time_remaining = time_limit - (time.time() - start_time),
 
     # Print the time remaining
-    print("Time remaining: {:.2f} seconds".format(time_remaining))
+    print("Time remaining: {:.2f} seconds".format(time_remaining)),
 
     # Wait for 1 second before checking the time again
-    time.sleep(1)
+    time.sleep(1),
 
     # Time limit has been reached
      print("Time's up!")
