@@ -48,7 +48,7 @@ class Uploader:
         await asyncio.sleep(id * 10)
         async with limiter:
            text= f"U R Bandded"
-            else:
+    else:
         try:
             loop = asyncio.get_running_loop()
 
