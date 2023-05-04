@@ -1,11 +1,14 @@
 import os
 import random
-import asyncio
 import logging
 from typing import Optional, Tuple
 
 from ..youtube import GoogleAuth, YouTube
 from ..config import Config
+
+import asyncio, time
+from aiolimiter import AsyncLimiter
+limiter = AsyncLimiter(4, 8)
 
 
 log = logging.getLogger(__name__)
@@ -42,6 +45,10 @@ class Uploader:
         return self.status, self.message
 
     async def _upload(self) -> None:
+        await asyncio.sleep(id * 10)
+        async with limiter:
+           text= f"U R Bandded"
+            else:
         try:
             loop = asyncio.get_running_loop()
 
