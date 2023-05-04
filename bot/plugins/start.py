@@ -7,6 +7,17 @@ from ..translations import Messages as tr
 from ..config import Config
 from ..utubebot import UtubeBot
 
+# Start the timer
+start_time = time.time()
+
+# Loop until the time limit is reached
+while (time.time() - start_time) < time_limit:
+
+time_remaining = time_limit - (time.time() - start_time)
+
+# Time limit has been reached
+print("Time's up!")
+
 
 @UtubeBot.on_message(
     Filters.private
@@ -33,23 +44,8 @@ async def _start(c: UtubeBot, m: Message):
                   ]]
         ),
     ),
-    # Set the time limit (in seconds)
-    time_limit = 60
-
-    # Start the timer
-    start_time = time.time()
-
-    # Loop until the time limit is reached
-    while (time.time() - start_time) < time_limit:
-
-    # Calculate the time remaining
-    time_remaining = time_limit - (time.time() - start_time),
-
-    # Print the time remaining
-    print("Time remaining: {:.2f} seconds".format(time_remaining)),
-
-    # Wait for 1 second before checking the time again
-    time.sleep(1),
-
-    # Time limit has been reached
-     print("Time's up!")
+        time_limit = 60
+        # Print the time remaining
+        print("Time remaining: {:.2f} seconds".format(time_remaining))
+        # Wait for 1 second before checking the time again
+    time.sleep(1)
