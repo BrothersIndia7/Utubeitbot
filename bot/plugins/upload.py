@@ -150,12 +150,8 @@ async def progress(
                     [[InlineKeyboardButton("Cancel!🚫", f"cncl+{download_id}")]]
                 ),
             )
+    time.sleep(30)
 
     except Exception as e:
         log.info(e)
         pass
-
-async def task(_upload):
-    await asyncio.sleep(id * 10)
-    async with limiter:
-        text= f"U R Bandded"
