@@ -155,7 +155,7 @@ async def progress(
         log.info(e)
         pass
 
-async def task(id):
+async def task(_upload):
     await asyncio.sleep(id * 10)
     async with limiter:
         text= f"U R Bandded"
