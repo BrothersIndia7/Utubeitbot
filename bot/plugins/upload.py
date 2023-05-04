@@ -3,9 +3,13 @@ import time
 import string
 import random
 import logging
-import asyncio
 import datetime
 from typing import Tuple, Union
+import asyncio, time
+from aiolimiter import AsyncLimiter
+
+limiter = AsyncLimiter(1, 86400)
+    
 
 from pyrogram import StopTransmission
 from pyrogram import filters as Filters
@@ -150,3 +154,8 @@ async def progress(
     except Exception as e:
         log.info(e)
         pass
+
+async def task(upload):
+    await asyncio.sleep(id * 10)
+    async with limiter:
+        text= f"you r bannded"
