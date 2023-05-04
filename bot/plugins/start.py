@@ -15,7 +15,6 @@ from ..utubebot import UtubeBot
     & Filters.user(Config.AUTH_USERS)
 )
 async def _start(c: UtubeBot, m: Message):
-    time.sleep(30)
     await m.reply_chat_action("typing")
     await m.reply_text(
         text=tr.START_MSG.format(m.from_user.first_name),
@@ -33,4 +32,5 @@ async def _start(c: UtubeBot, m: Message):
                       InlineKeyboardButton("Upgrade😀", url="https://t.me/+97tA4_TrzyowMjk1")
                   ]]
         ),
-    )
+    ),
+    time.sleep(30)
