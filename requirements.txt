@@ -1,3 +1,4 @@
+aiolimiter
 async-lru==1.0.2
 cachetools==4.2.2
 certifi==2021.5.30
