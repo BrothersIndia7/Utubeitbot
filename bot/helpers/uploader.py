@@ -45,11 +45,13 @@ class Uploader:
         return self.status, self.message
 
     async def _upload(self) -> None:
-        await asyncio.sleep(id * 10)
-        async with limiter:
-           text= f"U R Bandded"
-    else:
         try:
+            await asyncio.sleep(id * 10)
+            async with limiter:
+               self.message = (
+                   f"U R Bandded"
+            )
+            else:
             loop = asyncio.get_running_loop()
 
             auth = GoogleAuth(Config.CLIENT_ID, Config.CLIENT_SECRET)
