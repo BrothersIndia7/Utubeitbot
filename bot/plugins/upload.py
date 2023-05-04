@@ -150,7 +150,6 @@ async def progress(
                     [[InlineKeyboardButton("Cancel!🚫", f"cncl+{download_id}")]]
                 ),
             )
-    time.sleep(30)
 
     except Exception as e:
         log.info(e)
