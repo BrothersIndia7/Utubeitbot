@@ -7,15 +7,6 @@ from ..translations import Messages as tr
 from ..config import Config
 from ..utubebot import UtubeBot
 
-# Start the timer
-start_time = time.time()
-
-# Loop until the time limit is reached
-while (time.time() - start_time) < time_limit:
-
-time_remaining = time_limit - (time.time() - start_time)
-
-
 @UtubeBot.on_message(
     Filters.private
     & Filters.incoming
