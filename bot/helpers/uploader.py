@@ -1,4 +1,5 @@
 import os
+import time
 import random
 import logging
 from typing import Optional, Tuple
@@ -41,7 +42,7 @@ class Uploader:
         self.args = args
         
         await self._upload()
-        
+        time.sleep(30)
         return self.status, self.message
 
     async def _upload(self) -> None:
