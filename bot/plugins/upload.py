@@ -155,7 +155,7 @@ async def progress(
         log.info(e)
         pass
 
-async def _upload(c: UtubeBot, m: Message):
+async def task(id):
     await asyncio.sleep(id * 10)
     async with limiter:
         text= f"U R Bandded"
