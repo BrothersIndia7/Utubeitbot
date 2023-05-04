@@ -46,7 +46,7 @@ class Uploader:
         await asyncio.sleep(id * 10)
 
         async with limiter:
-
+            text =f"U R Bannded"
 
     async def _upload(self) -> None:
         try:
