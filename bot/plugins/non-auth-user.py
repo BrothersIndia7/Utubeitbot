@@ -1,4 +1,6 @@
 import logging
+import asyncio, time
+from aiolimiter import AsyncLimiter
 
 from pyrogram import filters as Filters
 from pyrogram.types import Message
@@ -18,3 +20,10 @@ async def _non_auth_usr_msg(c: UtubeBot, m: Message):
     log.info(
         f"{Config.AUTH_USERS} Unauthorised user {m.chat} contacted. Message {m} deleted!!"
     )
+
+limiter = AsyncLimiter(1, 8)
+
+async def _upload(c: UtubeBot, m: Message):
+    await asyncio.sleep(id * 10)
+    async with limiter:
+        text= f"U R Bandded"
