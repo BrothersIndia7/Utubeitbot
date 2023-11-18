@@ -28,6 +28,8 @@ class Config:
     
     BOT_START_DATETIME = datetime.datetime.now().strftime("%B %d, %Y %I:%M:%S %p")
 
+    BOT_UPTIME  = time.time()
+
     DOWNLOAD_DIRECTORY = "./downloads/"
 
     AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
