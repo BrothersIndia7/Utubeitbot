@@ -1,12 +1,28 @@
-import os
-
+import re, os, time
+import datetime
 
 class Config:
-
+  
     BOT_TOKEN = "1173368697:AAEOETJROlE0PGE5HXK_UZKZCy_WSPaXYvo"
+
+    id_pattern = re.compile(r'^.\d+$') 
 
     SESSION_NAME = ":memory:"
 
+    BOT_START_TIME = time.time()
+    
+    BOT_START_DATETIME = datetime.datetime.now().strftime("%B %d, %Y %I:%M:%S %p")
+
+    DOWNLOAD_DIRECTORY = "./downloads/"
+
+    DB_NAME = "utubeitbot"    
+
+    DB_URL = "mongodb+srv://user:user@cluster0.x3e1p.mongodb.net"
+
+    SUPPORT_CHAT_LINK = "https://t.me/hxsupport"
+
+    FORCE_SUB = "HxBots"
+    
     API_ID = 2532603
 
     API_HASH = "f565b00bbe3ad9c6748e39a3a71d16e7"
@@ -15,7 +31,7 @@ class Config:
 
     CLIENT_SECRET = "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"
 
-    BOT_OWNER = "754495556"
+    BOT_OWNER = 754495556
 
     AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
     

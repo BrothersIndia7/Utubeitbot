@@ -1,3 +1,9 @@
+class BotCommands:
+  Authorize = ['auth', 'authorize']
+  Update = ['update', 'up']
+  Restart = ['restart']
+  Log = ['log']
+
 class Messages:
 
     START_MSG = (
@@ -44,6 +50,17 @@ class Messages:
           "**__Ohoo You Want To Login. Great 💚.__**"
           "\n\n**__You need to give me the access to upload videos to your Youtube account.\n\nFor that open the given button below and allow access and copy the code. Come back here and send your code in this formate:\n /authorise your_code (eg: 4/4waa...).__**"
     )
+
+    UPDATE_MSG = [
+        ".",
+        f"**         Date:18-11-2023; Saturday \n\n__• Added /log Command.\n• Added /status Command.\n• Added /restart Command.\n• Added /users Command.\n• Added Database Support.__**",
+        f"**         Date:03-05-2023; Wednesday \n\n__• Created Upgrade Option.\n• Fixed some minor bugs.__**",
+        f"**         Date:06-12-2022; Tuesday \n\n__• Added Render Support and fixes some issues.__**", 
+        f"**         Date:04-11-2022; Friday \n\n__• Updated Code to support on Koyeb.com.__**",
+        f"**         Date:14-07-2022; Thrusday \n\n__• Added Option for Private Use.__**",
+        f"**         Date:06-06-2022; Monday\n\n__• Fixed 400 AUTH_BYTES_INVALID: The authorization bytes are invalid.\n• session_name error in deployment.\n• Unknown error about markdown__.**",  
+        "**Bot Developed by [@oVo-HxBots](https://github.com/oVo-HxBots)\n Bot Owned by @HxBots**"
+    ]
 
     UPGRADE_MSG = "**__For Purchase Contact @Kirodewal or Click Below Link---\nhttps://t.me/+97tA4_TrzyowMjk1**"
     
